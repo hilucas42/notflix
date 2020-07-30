@@ -1,3 +1,9 @@
+# NOTFLIX
+
+It's not than famous Flix. Just a little project being built during Imersão React lectures.
+
+## React readme:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
