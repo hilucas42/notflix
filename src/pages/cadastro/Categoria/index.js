@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DefaultTemplate from '../../../components/DefaultTemplate';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
   const emBranco = { nome: '', descricao: '', cor: '#000000'};
@@ -26,16 +27,18 @@ function CadastroCategoria() {
       }}>
         
         <FormField
-          name = "nome"
-          type = "text"
-          label = "Categoria: "
-          onChange = {handleChange}
+          name="nome"
+          type="text"
+          label="Categoria: "
+          value={novaCategoria.nome}
+          onChange={handleChange}
         />
 
         <FormField
           name = "descricao"
           type = "textarea"
           label = "Descrição: "
+          value={novaCategoria.descricao}
           onChange = {handleChange}
         />
 
@@ -43,12 +46,13 @@ function CadastroCategoria() {
           name = "cor"
           type = "color"
           label = "Cor: "
-          onChange = {handleChange}
+          value={novaCategoria.cor}
+          onChange = {handleChange}r
         />
 
-        <button>
+        <Button>
           Cadastrar
-        </button>
+        </Button>
       </form>
 
       <ul>
