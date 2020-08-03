@@ -18,8 +18,8 @@ function CadastroCategoria() {
 
   useEffect(() => {
     const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'https://notflix-unlicensed.herokuapp.com/categorias';
+      ? 'http://localhost:8080/api/categorias'
+      : 'https://notflix-unlicensed.herokuapp.com/api/categorias';
     fetch(URL)
       .then(async (resposta) => setCategorias(await resposta.json()));
   }, []);
