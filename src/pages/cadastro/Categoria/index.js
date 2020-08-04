@@ -3,25 +3,17 @@ import { Link } from 'react-router-dom';
 import DefaultTemplate from '../../../components/DefaultTemplate';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+import repoCategorias from '../../../repositories/categorias';
 
 function CadastroCategoria() {
-  const emBranco = { nome: '', descricao: '', cor: '#000000' };
-  const [novaCategoria, setNovaCategoria] = useState(emBranco);
+  const emBranco = { titulo: '', descricao: '', cor: '#000000' };
   const [categorias, setCategorias] = useState([]);
 
-  function handleChange(e) {
-    setNovaCategoria({
-      ...novaCategoria,
-      [e.target.getAttribute('name')]: e.target.value,
-    });
-  }
+  const { valoresForm, handleChange, clearForm } = useForm(emBranco);
 
   useEffect(() => {
-    const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/api/categorias'
-      : 'https://notflix-unlicensed.herokuapp.com/api/categorias';
-    fetch(URL)
-      .then(async (resposta) => setCategorias(await resposta.json()));
+    repoCategorias.getAll().then((resposta) => setCategorias(resposta));
   }, []);
 
   return (
@@ -30,8 +22,8 @@ function CadastroCategoria() {
 
       <form onSubmit={(e) => {
         e.preventDefault();
-        setCategorias([...categorias, novaCategoria]);
-        setNovaCategoria(emBranco);
+        setCategorias([...categorias, valoresForm]);
+        clearForm();
       }}
       >
 
@@ -39,7 +31,7 @@ function CadastroCategoria() {
           name="titulo"
           type="text"
           label="Categoria: "
-          value={novaCategoria.titulo}
+          value={valoresForm.titulo}
           onChange={handleChange}
         />
 
@@ -47,7 +39,7 @@ function CadastroCategoria() {
           name="descricao"
           type="textarea"
           label="Descrição: "
-          value={novaCategoria.descricao}
+          value={valoresForm.descricao}
           onChange={handleChange}
         />
 
@@ -55,7 +47,7 @@ function CadastroCategoria() {
           name="cor"
           type="color"
           label="Cor: "
-          value={novaCategoria.cor}
+          value={valoresForm.cor}
           onChange={handleChange}
         />
 
