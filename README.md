@@ -2,7 +2,9 @@
 
 It's not than famous Flix. Just a little project being built during Imersão React lectures.
 
-Project is deployed at [notflix-unlicensed.herokuapp.com](notflix-unlicensed.herokuapp.com). Take a look!
+Project is deployed at [notflix-unlicensed.herokuapp.com](https://notflix-unlicensed.herokuapp.com). Take a look!
+
+There is also a [version hosted at Vercel](https://notflix-unlicensed.vercel.app).
 
 ## React readme:
 
@@ -12,18 +14,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -34,6 +31,15 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm start`
+
+Runs the app's backend and API for production, serving the built app from the `build` folder.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run eject`
 
