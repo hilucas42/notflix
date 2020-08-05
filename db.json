@@ -186,6 +186,12 @@
       "categoriaId": 5,
       "titulo": "Resident Evil 8",
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+    },
+    {
+      "titulo": "Why TensorFlow?",
+      "url": "https://www.youtube.com/watch?v=yjprpOoH5c8",
+      "categoriaId": 3,
+      "id": 25
     }
   ]
 }

@@ -2,6 +2,8 @@
 
 It's not than famous Flix. Just a little project being built during Imersão React lectures.
 
+Project is deployed at [notflix-unlicensed.herokuapp.com](notflix-unlicensed.herokuapp.com). Take a look!
+
 ## React readme:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
